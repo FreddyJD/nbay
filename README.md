@@ -1,2 +1,2 @@
 # nbay
-🔥A market place | This is a replica of the ebay created in JavaScript
+A replica of the eBay created in JavaScript entirely built in NodeJS  with ExpressJS, Handlebars a MySQL
