@@ -1,0 +1,30 @@
+{
+  "name": "nbay",
+  "version": "1.0.0",
+  "description": "A marketplac",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js --exec babel-node e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreddyJD/nbay.git"
+  },
+  "author": "FreddyJD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FreddyJD/nbay/issues"
+  },
+  "homepage": "https://github.com/FreddyJD/nbay#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
