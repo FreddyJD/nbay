@@ -1,0 +1,7 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "hmw",
+  "main": "app.js",
+  "license": "MIT"
+}
