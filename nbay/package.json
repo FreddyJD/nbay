@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "description": "hmw",
   "main": "app.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  }
 }
