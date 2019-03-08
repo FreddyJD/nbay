@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS `pizzas_db`;
+CREATE DATABASE `pizzas_db`;
+USE `pizzas_db`
+
+CREATE TABLE `pizzas` (
+  `id` Int( 11 ) AUTO_INCREMENT NOT NULL,
+  `pizza_name` VARCHAR( 255) NOT NULL,
+  `eat` BOOLEAN NOT NULL,
+  `date` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY ( `id` ) );
