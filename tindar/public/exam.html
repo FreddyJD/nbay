@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tindar</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Exam</h2>
+
+      <p>
+        name
+      </p>
+      <input type="text" id="name" class="form-control" />
+
+      <p>
+        Photo Link
+      </p>
+      <input type="text" id="photo" class="form-control" />
+
+      <hr />
+
+      <h3><strong>Question 1</strong></h3>
+      <h4>Q1 is awesome</h4>
+      <select data-placeholder="1" id="q1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 2</strong></h3>
+      <h4>Q2 is awesome</h4>
+      <select data-placeholder="1" id="q2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 3</strong></h3>
+      <h4>Q3 is awesome</h4>
+      <select data-placeholder="" id="q3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 4</strong></h3>
+      <h4>Q4 is awesome</h4>
+      <select data-placeholder="1" id="q4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 5</strong></h3>
+      <h4>Q5 is awesome</h4>
+      <select data-placeholder="1" id="q5">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 6</strong></h3>
+      <h4>Q6 is awesome</h4>
+      <select data-placeholder="1" id="q6">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 7</strong></h3>
+      <h4>Q7 is awesome</h4>
+      <select data-placeholder="1" id="q7">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 8</strong></h3>
+      <h4>Q8 is awesome</h4>
+      <select data-placeholder="1" id="q8">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 9</strong></h3>
+      <h4>Q9 is awesome</h4>
+      <select data-placeholder="1" id="q9">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h3><strong>Question 10</strong></h3>
+      <h4>Q10 is awesome</h4>
+      <select data-placeholder="" id="q10">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+      </select>
+
+      <br />
+      <button type="submit" class="btn btn-primary" id="submit">Send</button>
+      <p>Your match</p>
+      <h2 id="m"></h2>
+
+      <hr />
+      <footer class="footer">
+        <div class="container">
+          <a href="/api/friends">API </a>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $("#submit").on("click", function() {
+        userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        $.post("/api/friends", userData, data => $("#m").text(data.name));
+        //  To be supported -- imgs 😠 Its already coded but this homework
+        // was too time consuming
+      });
+    </script>
+  </body>
+</html>

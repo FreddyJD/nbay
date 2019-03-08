@@ -1,0 +1,23 @@
+<h1>Ohh my pizza</h1>
+
+<form action="/api/add/" method="POST">
+    <input type="text" name="name" />
+    <button type="submit">send</button>
+</form>
+<ul>
+    {{#each pizzas}}
+    <li {{#if this.devoured}} {{/if}}>
+        <p>Pizza name: {{this.pizza_name}}</p>
+        <a href="/api/eat/{{this.id}}" class="eat">Eat pizza</a>
+    </li>
+    {{/each}}
+</ul>
+
+<script type="text/javascript">
+    $(".eat").on("click", () => {
+        $.ajax({
+            method: "GET",
+            url: "/api/eat/" + parseInt($(this).attr("data-id"))
+        });
+    })
+</script>
