@@ -7,7 +7,7 @@ module.exports = (app) => {
 
   app.get("/api/eat/:id", (req, res) =>  {
     const { id } = req.params;
-    pizza.update(id, { devoured: true }, (result) => {
+    pizza.update(id, { eat: true }, (result) => {
       pizza.all(() => res.redirect("/"))
     });
   });
